@@ -1,0 +1,174 @@
+.create-metric-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.create-metric-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.metric-form-wrapper {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.dataset-columns-section {
+    background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
+    border: 2px solid rgba(102, 126, 234, 0.5);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.dataset-columns-section h3 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.dataset-columns-section .text-muted {
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.column-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.column-checkbox:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.15);
+}
+
+.column-checkbox input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.column-checkbox span {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.selected-columns-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: center;
+    padding-top: var(--spacing-md);
+    border-top: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.selected-columns-preview strong {
+    margin-right: var(--spacing-xs);
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.metric-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-section {
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.selected-columns-info {
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--primary);
+}
+
+.selected-columns-info h4 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.columns-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.success-modal {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.success-modal h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.success-modal p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .columns-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

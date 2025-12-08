@@ -1,0 +1,14 @@
+Understand the porject and do these changes.
+
+1. Initially before the Metric management system home page there should be a temporary page which has these properties:
+  a. It should have the title "Onboard Data Product" and a subtitle "Dataset viewer". Here i have the ability to upload a dataset. At the right top corner there should be a button named "Convert to metric".
+   b. If the "Convert to metric" is clicked then the Metric management system is opened. Rest all the things in the origianl porject are almost similar.
+
+2. For the main project do these things:
+  a. In the create new metric page of user login remove the upload dataset option.
+  b. For the metric contract change the fields required into these:
+     A. Remove the status option from the contract and use this status only after the metric is created or already available metric, to show whether or not they are approved, pending.
+
+c. Remove the human editable version field in the metric contract and make it automatically showup in the overview of the metric once it is create.example: when a new metric is created it is default version 1, and if a exisiting metric is edited it becomes version 2 and so on automatically.
+d. For each subsection of the metric contract include a small "i" icon which the user can hover over and it gives the description about the field to the user.
+e. The column names of dataset uploaded in the first page of onboard data product should be available to see in the metric contract page.

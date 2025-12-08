@@ -1,0 +1,42 @@
+.edit-metric-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.edit-metric-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.search-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.search-bar {
+    margin-bottom: var(--spacing-md);
+}
+
+.search-input {
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.metrics-section {
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
