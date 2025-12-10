@@ -31,10 +31,15 @@ const OnboardDataProduct = () => {
                 <div className="header-content">
                     <div className="header-text">
                         <h1>Onboard Data Product</h1>
-                        <p className="subtitle">Dataset viewer</p>
                     </div>
                 </div>
             </div>
+
+            {hasData && (
+                <div className="header-subtext">
+                    <span>Dataset Uploaded Successfully! Your dataset has been loaded with {columns.length} columns.</span>
+                </div>
+            )}
 
             <div className="onboard-container">
                 {!hasData ? (
@@ -47,12 +52,6 @@ const OnboardDataProduct = () => {
                     </div>
                 ) : (
                     <div className="login-options-section fade-in">
-                        <div className="success-message">
-                            <div className="success-icon">✅</div>
-                            <h2>Dataset Uploaded Successfully!</h2>
-                            <p className="text-muted">Your dataset has been loaded with {columns.length} columns. Please select your login type to continue.</p>
-                        </div>
-
                         <div className="login-options">
                             <div className="login-card" onClick={handleUserLogin}>
                                 <div className="login-icon">👤</div>

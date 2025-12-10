@@ -11,7 +11,7 @@ const AdminDashboard = () => {
         <div className="dashboard-page">
             <div className="dashboard-header">
                 <div className="header-content">
-                    <h1>Admin Dashboard</h1>
+                    <h1>ADMIN DASHBOARD</h1>
                     <button
                         className="btn btn-secondary btn-sm"
                         onClick={() => navigate('/login')}
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
             <div className="dashboard-content container">
                 <div className="dashboard-section fade-in">
                     <div className="section-header">
-                        <h2>Pending Approvals</h2>
+                        <h2>PENDING APPROVALS</h2>
                         <span className="badge badge-warning">{pendingMetrics.length}</span>
                     </div>
 
@@ -41,7 +41,7 @@ const AdminDashboard = () => {
                     ) : (
                         <div className="empty-state">
                             <div className="empty-icon">✅</div>
-                            <h3>All Caught Up!</h3>
+                            <h3>ALL CAUGHT UP!</h3>
                             <p className="text-muted">No pending metrics to review</p>
                         </div>
                     )}

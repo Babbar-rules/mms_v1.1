@@ -1,16 +1,16 @@
 .dashboard-page {
     min-height: 100vh;
-    background: var(--bg-primary);
+    background: #f5f7fa;
 }
 
 .dashboard-header {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border);
-    padding: var(--spacing-lg) 0;
+    background: linear-gradient(135deg, #0f3a7d 0%, #062a5c 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(15, 58, 125, 0.15);
 }
 
 .header-content {
@@ -24,7 +24,11 @@
 
 .header-content h1 {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 1.6rem !important;
+    color: white;
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px;
 }
 
 .dashboard-actions {
@@ -37,7 +41,10 @@
 }
 
 .dashboard-content {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding-top: 5rem !important;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
 }
 
 .dashboard-section {
@@ -54,6 +61,7 @@
 .section-header h2 {
     margin: 0;
     font-size: 1.5rem;
+    color: #0f3a7d;
 }
 
 .metrics-grid {
@@ -65,13 +73,14 @@
 .empty-state {
     text-align: center;
     padding: var(--spacing-xl);
-    background: var(--bg-secondary);
-    border: 1px dashed var(--border);
+    background: white;
+    border: 1px solid #e0e8f0;
     border-radius: var(--radius-lg);
 }
 
 .empty-state p {
     margin-bottom: var(--spacing-md);
+    color: #4a4a4a;
 }
 
 @media (max-width: 768px) {

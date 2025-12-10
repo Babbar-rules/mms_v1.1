@@ -4,9 +4,36 @@
 
 .modal-header h3 {
     margin: 0;
-    color: var(--text-primary);
+    color: #0f3a7d;
 }
 
 .modal-body {
-    color: var(--text-secondary);
+    color: #4a4a4a;
+}
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
 }

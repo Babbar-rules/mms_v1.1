@@ -5,6 +5,28 @@ import InfoTooltip from '../components/InfoTooltip'
 import Modal from '../components/Modal'
 import './CreateMetric.css'
 
+// Helper function to get field type icon
+const getFieldIcon = (fieldName) => {
+    const fieldIcons = {
+        // Text input fields
+        metricName: '📋',
+        domain: '🏛️',
+        businessOwner: '👥',
+        technicalSteward: '⚙️',
+        description: '📝',
+        businessPurpose: '🎯',
+        useCases: '✓',
+        exclusionScenarios: 'ⓧ',
+        interpretationRules: '📖',
+        abstractInputs: '⬇️',
+        aggregationLogic: '∑',
+        windowLogic: '⏳',
+        filterRules: '◆',
+        unitOfMeasure: '⊗'
+    }
+    return fieldIcons[fieldName] || '◎'
+}
+
 const CreateMetric = () => {
     const navigate = useNavigate()
     const { createMetric, datasetColumns } = useMetrics()
@@ -140,6 +162,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('metricName')}</span>
                                     Metric Name *
                                     <InfoTooltip text="A clear, descriptive name for your metric (e.g., 'Monthly Active Users', 'Revenue Per Customer')" />
                                 </label>
@@ -155,6 +178,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('domain')}</span>
                                     Domain/Department *
                                     <InfoTooltip text="The business domain or department this metric belongs to (e.g., 'Sales', 'Marketing', 'Finance')" />
                                 </label>
@@ -170,6 +194,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('businessOwner')}</span>
                                     Business Owner *
                                     <InfoTooltip text="The person responsible for the business definition and usage of this metric" />
                                 </label>
@@ -185,6 +210,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('technicalSteward')}</span>
                                     Technical Steward
                                     <InfoTooltip text="The person responsible for the technical implementation and data quality of this metric" />
                                 </label>
@@ -203,6 +229,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('description')}</span>
                                     Description
                                     <InfoTooltip text="A plain-English explanation of what this metric measures and why it matters" />
                                 </label>
@@ -217,6 +244,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('businessPurpose')}</span>
                                     Business Purpose
                                     <InfoTooltip text="Why this metric exists and what business decisions it supports" />
                                 </label>
@@ -230,6 +258,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('useCases')}</span>
                                     Use Cases
                                     <InfoTooltip text="Specific scenarios or reports where this metric is used" />
                                 </label>
@@ -243,6 +272,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('exclusionScenarios')}</span>
                                     Exclusion Scenarios
                                     <InfoTooltip text="Cases or data that should be excluded from this metric calculation" />
                                 </label>
@@ -256,6 +286,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('unitOfMeasure')}</span>
                                     Unit of Measure
                                     <InfoTooltip text="The unit this metric is measured in (e.g., USD, count, percent, days)" />
                                 </label>
@@ -271,6 +302,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('interpretationRules')}</span>
                                     Interpretation Rules
                                     <InfoTooltip text="Guidelines for how to interpret the metric values (e.g., rounding rules, handling negative values, time cutoffs)" />
                                 </label>
@@ -289,6 +321,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('abstractInputs')}</span>
                                     Abstract Inputs
                                     <InfoTooltip text="The conceptual data elements needed for this calculation (e.g., 'transaction_amount', 'customer_count')" />
                                 </label>
@@ -304,6 +337,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('aggregationLogic')}</span>
                                     Aggregation Logic
                                     <InfoTooltip text="The mathematical operation to perform (e.g., SUM, AVG, COUNT, MAX, MIN)" />
                                 </label>
@@ -318,6 +352,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('windowLogic')}</span>
                                     Window Logic
                                     <InfoTooltip text="The time period or window over which to calculate (e.g., 'Daily', 'Monthly rolling 30 days')" />
                                 </label>
@@ -333,6 +368,7 @@ const CreateMetric = () => {
 
                             <div className="form-group">
                                 <label className="form-label">
+                                    <span className="field-icon">{getFieldIcon('filterRules')}</span>
                                     Filter Rules
                                     <InfoTooltip text="Business-level conditions that must be met for data to be included in the calculation" />
                                 </label>

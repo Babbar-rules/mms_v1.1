@@ -39,17 +39,13 @@ const Home = () => {
 
     return (
         <div className="home-page">
-            <div className="home-container">
-                <div className="home-header fade-in">
-                    <h1 className="home-title">
-                        <span className="gradient-text">Metric Management</span>
-                        <span className="gradient-text">System</span>
-                    </h1>
-                    <p className="home-subtitle">
-                        Create, manage, and approve metric contracts with ease
-                    </p>
+            <div className="home-header-box">
+                <div className="home-header-content">
+                    <h1>METRIC MANAGEMENT SYSTEM</h1>
                 </div>
+            </div>
 
+            <div className="home-container">
                 {!hasData ? (
                     <div className="upload-section-home fade-in" style={{ animationDelay: '0.1s' }}>
                         <h2>Upload Your Dataset</h2>
@@ -76,7 +72,7 @@ const Home = () => {
                                 <h2>User Login</h2>
                                 <p>Create and manage metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
-                                    Login as User
+                                    LOGIN
                                 </button>
                             </div>
 
@@ -85,18 +81,12 @@ const Home = () => {
                                 <h2>Admin Login</h2>
                                 <p>Review and approve metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
-                                    Login as Admin
+                                    LOGIN
                                 </button>
                             </div>
                         </div>
                     </div>
                 )}
-
-                <div className="home-footer fade-in" style={{ animationDelay: '0.4s' }}>
-                    <p className="text-muted">
-                        Streamline your metric governance with our comprehensive management platform
-                    </p>
-                </div>
             </div>
         </div>
     )

@@ -1,53 +1,53 @@
 .home-page {
     min-height: 100vh;
+    background: #f5f7fa;
+    padding-bottom: 2rem;
+}
+
+.home-header-box {
+    background: linear-gradient(135deg, #0f3a7d 0%, #062a5c 100%);
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(15, 58, 125, 0.15);
+}
+
+.home-header-box .home-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1f3a 100%);
-    padding: var(--spacing-lg);
+}
+
+.home-header-box h1 {
+    color: white;
+    font-size: 1.6rem !important;
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-align: left;
 }
 
 .home-container {
     max-width: 1000px;
     width: 100%;
-}
-
-.home-header {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-}
-
-.home-title {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.home-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0;
+    margin: 2rem auto;
+    padding: 0 var(--spacing-lg);
 }
 
 .upload-section-home {
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 2rem;
+    border: 1px solid #e0e8f0;
 }
 
 .upload-section-home h2 {
-    color: #333;
+    color: #0f3a7d;
     margin-bottom: 0.5rem;
     text-align: center;
 }
@@ -55,7 +55,7 @@
 .upload-section-home .text-muted {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #666;
+    color: #4a4a4a;
 }
 
 .success-message-home {
@@ -64,7 +64,8 @@
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e8f0;
 }
 
 .success-message-home .success-icon {
@@ -73,12 +74,12 @@
 }
 
 .success-message-home h2 {
-    color: #333;
+    color: #0f3a7d;
     margin-bottom: 0.5rem;
 }
 
 .success-message-home p {
-    color: #666;
+    color: #4a4a4a;
     font-size: 1rem;
 }
 
@@ -97,11 +98,11 @@
 
 .login-card {
     background: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #e0e8f0;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     aspect-ratio: 1 / 1;
@@ -113,8 +114,8 @@
 
 .login-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(15, 58, 125, 0.15);
+    border-color: #00a8cc;
 }
 
 .login-icon {
@@ -124,14 +125,19 @@
 
 .login-card h2 {
     margin-bottom: 0.5rem;
-    color: #1a1f3a;
+    color: #1a1a1a;
     font-size: 1.5rem;
 }
 
 .login-card p {
-    color: #666;
+    color: #4a4a4a;
     margin-bottom: 1rem;
     font-size: 0.9rem;
+}
+
+.login-card .btn {
+    justify-content: center;
+    text-align: center;
 }
 
 .home-footer {

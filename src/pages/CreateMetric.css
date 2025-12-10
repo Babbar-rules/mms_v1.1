@@ -1,33 +1,64 @@
 .create-metric-page {
     min-height: 100vh;
-    background: var(--bg-primary);
+    background: #f5f7fa;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #0f3a7d 0%, #062a5c 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(15, 58, 125, 0.15);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.6rem !important;
+    color: white;
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px;
 }
 
 .create-metric-container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-lg) 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 .metric-form-wrapper {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
+    background: white;
+    border: 1px solid #e0e8f0;
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    padding: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .dataset-columns-section {
-    background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
-    border: 2px solid rgba(102, 126, 234, 0.5);
+    background: #e8f0f8;
+    border: 2px solid #00a8cc;
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
 }
 
 .dataset-columns-section h3 {
     margin: 0 0 var(--spacing-xs) 0;
-    color: #333;
+    color: #0f3a7d;
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -35,7 +66,7 @@
 .dataset-columns-section .text-muted {
     margin-bottom: var(--spacing-md);
     font-size: 0.95rem;
-    color: #555;
+    color: #4a4a4a;
     font-weight: 500;
 }
 
@@ -52,7 +83,7 @@
     gap: var(--spacing-xs);
     padding: var(--spacing-sm) var(--spacing-md);
     background: white;
-    border: 2px solid #ddd;
+    border: 2px solid #d0d8e0;
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -60,10 +91,10 @@
 }
 
 .column-checkbox:hover {
-    border-color: #667eea;
-    background: #f8f9ff;
+    border-color: #00a8cc;
+    background: #f0f8fc;
     transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 168, 204, 0.15);
 }
 
 .column-checkbox input[type="checkbox"] {
@@ -74,7 +105,7 @@
 
 .column-checkbox span {
     font-size: 0.95rem;
-    color: #333;
+    color: #1a1a1a;
     font-weight: 600;
 }
 
@@ -101,8 +132,14 @@
 }
 
 .form-section {
-    padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--border);
+    padding: var(--spacing-lg);
+    background: white;
+    border: 1px solid #e0e8f0;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    grid-auto-flow: dense;
 }
 
 .form-section:last-of-type {
@@ -110,22 +147,131 @@
 }
 
 .form-section h3 {
-    margin-bottom: var(--spacing-md);
-    color: var(--primary);
+    grid-column: 1 / -1;
+    margin: 0 0 var(--spacing-lg) 0;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid #00a8cc;
+    color: #0f3a7d;
     font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
+/* Grid layout for form fields - displayed as blocks */
+.form-section > .form-group {
+    margin-bottom: 0;
+}
+
+/* Textarea fields span full width */
+.form-section > .form-group textarea {
+    min-height: 80px;
+}
+
+/* Full-width fields for specific sections */
+.form-section.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* Form Group - Each field as a card-like container block */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #f9fbfd;
+    border: 2px solid #e0e8f0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.form-group:hover {
+    background: #f0f8fc;
+    border-color: #00a8cc;
+    box-shadow: 0 4px 12px rgba(0, 168, 204, 0.15);
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #0f3a7d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #e8d5c4 0%, #f0e0d0 100%);
+    border: 2px solid #ffb088;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ff6b35;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(255, 107, 53, 0.15);
+}
+
+/* Enhanced input and select styling */
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 2px solid #d0d8e0;
+    border-radius: 6px;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+    border-color: #00a8cc;
+    background: #fafbfc;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: #00a8cc;
+    box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.15);
+    background: white;
+}
+
+/* Make selects look like dropdowns with visual indicator */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath fill='%230f3a7d' d='M1 1l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 14px;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
 }
 
 .selected-columns-info {
     padding: var(--spacing-md);
-    background: var(--bg-tertiary);
+    background: #e8f0f8;
     border-radius: var(--radius-md);
-    border: 1px solid var(--primary);
+    border: 1px solid #00a8cc;
 }
 
 .selected-columns-info h4 {
@@ -155,20 +301,78 @@
 
 .success-modal h3 {
     margin-bottom: var(--spacing-sm);
-    color: var(--text-primary);
+    color: #0f3a7d;
 }
 
 .success-modal p {
     margin-bottom: var(--spacing-lg);
-    color: var(--text-secondary);
+    color: #4a4a4a;
+}
+
+/* Right Sidebar Info Panel */
+.form-info-panel {
+    background: #fef6e8;
+    border: 2px solid #ffd966;
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.form-info-panel h3 {
+    margin: 0 0 1rem 0;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-info-panel ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.form-info-panel li {
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 1400px) {
+    .form-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
+    .create-metric-container {
+        grid-template-columns: 1fr;
+    }
+
     .columns-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Stack form fields vertically on mobile */
+    .form-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-info-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-section {
         grid-template-columns: 1fr;
     }
 }

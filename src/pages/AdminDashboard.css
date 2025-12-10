@@ -4,7 +4,11 @@
     opacity: 0.5;
 }
 
+.dashboard-content {
+    padding-top: 3rem;
+}
+
 .empty-state h3 {
     margin-bottom: var(--spacing-sm);
-    color: var(--text-primary);
+    color: #0f3a7d;
 }

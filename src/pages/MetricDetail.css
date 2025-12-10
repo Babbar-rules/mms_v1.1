@@ -1,6 +1,6 @@
 .metric-detail-page {
     min-height: 100vh;
-    background: var(--bg-primary);
+    background: #f5f7fa;
 }
 
 .metric-detail-container {
@@ -9,10 +9,11 @@
 }
 
 .detail-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
+    background: white;
+    border: 1px solid #e0e8f0;
     border-radius: var(--radius-lg);
     padding: var(--spacing-xl);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .detail-header {
@@ -21,7 +22,7 @@
     align-items: flex-start;
     padding-bottom: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid #e0e8f0;
 }
 
 .header-actions {
@@ -33,16 +34,18 @@
 .detail-header h2 {
     margin: 0;
     font-size: 2rem;
+    color: #0f3a7d;
 }
 
 .metric-uuid {
     margin-top: var(--spacing-xs);
+    color: #4a4a4a;
 }
 
 .detail-section {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #e0e8f0;
 }
 
 .detail-section:last-of-type {
@@ -51,13 +54,13 @@
 }
 
 .detail-section h3 {
-    color: var(--primary);
+    color: #0f3a7d;
     margin-bottom: var(--spacing-md);
     font-size: 1.25rem;
 }
 
 .detail-section h4 {
-    color: var(--text-primary);
+    color: #1a1a1a;
     margin-bottom: var(--spacing-md);
     font-size: 1rem;
 }
@@ -81,7 +84,7 @@
 .detail-item .label,
 .detail-item-full .label {
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: #4a4a4a;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
@@ -89,7 +92,7 @@
 
 .detail-item .value,
 .detail-item-full .value {
-    color: var(--text-primary);
+    color: #1a1a1a;
     font-size: 1rem;
 }
 

@@ -1,31 +1,33 @@
 .onboard-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f5f7fa;
     padding-bottom: 2rem;
 }
 
 .onboard-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #0f3a7d 0%, #062a5c 100%);
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(15, 58, 125, 0.15);
 }
 
 .onboard-header .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .onboard-header .header-text h1 {
     color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 1.6rem !important;
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
     margin: 0 0 0.5rem 0;
+    letter-spacing: 0.5px;
+    text-align: left;
 }
 
 .onboard-header .subtitle {
@@ -35,17 +37,43 @@
     font-weight: 400;
 }
 
+.header-subtext {
+    background: #4a7bb8;
+    color: white;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.header-subtext span {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 .convert-btn {
     white-space: nowrap;
     padding: 0.75rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .convert-btn:hover:not(.disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    background: #e55a24;
 }
 
 .convert-btn.disabled {
@@ -57,21 +85,25 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .upload-section {
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e8f0;
 }
 
 .login-options-section {
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e8f0;
 }
 
 .success-message {
@@ -85,12 +117,12 @@
 }
 
 .success-message h2 {
-    color: #333;
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
 }
 
 .success-message .text-muted {
-    color: #666;
+    color: #4a4a4a;
     font-size: 1rem;
 }
 
@@ -103,8 +135,8 @@
 }
 
 .login-card {
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-    border: 2px solid rgba(102, 126, 234, 0.3);
+    background: white;
+    border: 2px solid #e0e8f0;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
@@ -114,8 +146,8 @@
 
 .login-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 8px 25px rgba(15, 58, 125, 0.15);
+    border-color: #00a8cc;
 }
 
 .login-card .login-icon {
@@ -124,13 +156,13 @@
 }
 
 .login-card h3 {
-    color: #333;
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
 
 .login-card p {
-    color: #666;
+    color: #4a4a4a;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
@@ -139,9 +171,50 @@
     width: 100%;
 }
 
+/* Info Guide Panel */
+.info-guide-panel {
+    background: #fef6e8;
+    border: 2px solid #ffd966;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.info-guide-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ffd966;
+}
+
+.info-guide-header h3 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+}
+
+.info-guide-content {
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.info-guide-content ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.info-guide-content li {
+    margin-bottom: 0.75rem;
+}
+
 .info-card {
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-    border: 2px solid rgba(102, 126, 234, 0.3);
+    background: #e8f0f8;
+    border: 1px solid #00a8cc;
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
@@ -190,7 +263,9 @@
     }
 
     .onboard-header .header-text h1 {
-        font-size: 2rem;
+        font-size: 1.6rem !important;
+        font-weight: 200 !important;
+        text-transform: uppercase !important;
     }
 
     .convert-btn {

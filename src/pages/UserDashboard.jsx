@@ -16,7 +16,7 @@ const UserDashboard = () => {
         <div className="dashboard-page">
             <div className="dashboard-header">
                 <div className="header-content">
-                    <h1>User Dashboard</h1>
+                    <h1>USER DASHBOARD</h1>
                     <button
                         className="btn btn-secondary btn-sm"
                         onClick={() => navigate('/login')}
@@ -44,7 +44,7 @@ const UserDashboard = () => {
             <div className="dashboard-content container">
                 <div className="dashboard-section fade-in">
                     <div className="section-header">
-                        <h2>Recently Created Metrics</h2>
+                        <h2>RECENTLY CREATED METRICS</h2>
                         <span className="badge badge-secondary">{recentMetrics.length}</span>
                     </div>
                     {recentMetrics.length > 0 ? (
@@ -68,7 +68,7 @@ const UserDashboard = () => {
 
                 <div className="dashboard-section fade-in" style={{ animationDelay: '0.1s' }}>
                     <div className="section-header">
-                        <h2>Pending Approval</h2>
+                        <h2>PENDING APPROVAL</h2>
                         <span className="badge badge-warning">{pendingMetrics.length}</span>
                     </div>
                     {pendingMetrics.length > 0 ? (
@@ -86,7 +86,7 @@ const UserDashboard = () => {
 
                 <div className="dashboard-section fade-in" style={{ animationDelay: '0.2s' }}>
                     <div className="section-header">
-                        <h2>Approved Metrics</h2>
+                        <h2>APPROVED METRICS</h2>
                         <span className="badge badge-success">{approvedMetrics.length}</span>
                     </div>
                     {approvedMetrics.length > 0 ? (
