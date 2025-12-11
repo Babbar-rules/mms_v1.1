@@ -41,11 +41,11 @@
     background: #4a7bb8;
     color: white;
     font-size: 0.95rem;
-    padding: 0.75rem;
+    padding: 1rem;
     font-weight: 400;
     text-align: left;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     width: 100%;
 }
 
@@ -83,7 +83,7 @@
 
 .onboard-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto 0 auto;
     padding: 0 2rem;
     display: flex;
     justify-content: center;
@@ -93,9 +93,10 @@
 .upload-section {
     background: white;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid #e0e8f0;
+    min-width: 800px;
 }
 
 .login-options-section {

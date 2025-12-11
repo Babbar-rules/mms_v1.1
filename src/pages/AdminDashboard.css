@@ -1,3 +1,27 @@
+/* Custom Scrollbar Styling */
+.dashboard-page ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.dashboard-page ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dashboard-page ::-webkit-scrollbar-thumb {
+    background: #0f3a7d;
+    border-radius: 6px;
+}
+
+.dashboard-page ::-webkit-scrollbar-thumb:hover {
+    background: #062a5c;
+}
+
+/* Firefox scrollbar */
+.dashboard-page {
+    scrollbar-width: thin;
+    scrollbar-color: #0f3a7d #f1f1f1;
+}
+
 .empty-icon {
     font-size: 4rem;
     margin-bottom: var(--spacing-md);

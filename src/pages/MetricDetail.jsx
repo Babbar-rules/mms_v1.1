@@ -144,14 +144,6 @@ const MetricDetail = () => {
                                 <span className="label">Domain/Department</span>
                                 <span className="value">{displayMetric.domain}</span>
                             </div>
-                            <div className="detail-item">
-                                <span className="label">Category</span>
-                                <span className="value">{displayMetric.category}</span>
-                            </div>
-                            <div className="detail-item">
-                                <span className="label">Type</span>
-                                <span className="value">{displayMetric.type}</span>
-                            </div>
 
                             <div className="detail-item">
                                 <span className="label">Version</span>

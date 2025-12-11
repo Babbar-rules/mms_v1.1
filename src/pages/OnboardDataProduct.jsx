@@ -58,7 +58,7 @@ const OnboardDataProduct = () => {
                                 <h3>User Login</h3>
                                 <p>Create and manage metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
-                                    Login as User
+                                    LOGIN
                                 </button>
                             </div>
 
@@ -67,7 +67,7 @@ const OnboardDataProduct = () => {
                                 <h3>Admin Login</h3>
                                 <p>Review and approve metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
-                                    Login as Admin
+                                    LOGIN
                                 </button>
                             </div>
                         </div>
