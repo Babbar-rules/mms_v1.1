@@ -97,7 +97,7 @@
 .empty-state {
     text-align: center;
     padding: var(--spacing-xl);
-    background: white;
+    background: #e8e8e8;
     border: 1px solid #e0e8f0;
     border-radius: var(--radius-lg);
 }

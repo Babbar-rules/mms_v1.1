@@ -88,7 +88,7 @@ const EditMetric = () => {
 
                 <div className="metrics-section fade-in" style={{ animationDelay: '0.1s' }}>
                     <div className="section-header">
-                        <h2>Available Metrics</h2>
+                        <h2>AVAILABLE METRICS</h2>
                         <span className="badge badge-primary">{filteredMetrics.length}</span>
                     </div>
 

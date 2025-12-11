@@ -4,11 +4,12 @@
 }
 
 .edit-metric-container {
-    padding: 5rem var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+    padding: 7rem var(--spacing-md) var(--spacing-lg) var(--spacing-md);
 }
 
 .search-section {
     margin-bottom: var(--spacing-xl);
+    margin-top: 3rem;
 }
 
 .search-bar {
