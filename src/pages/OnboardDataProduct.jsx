@@ -55,7 +55,7 @@ const OnboardDataProduct = () => {
                         <div className="login-options">
                             <div className="login-card" onClick={handleUserLogin}>
                                 <div className="login-icon">👤</div>
-                                <h3>User Login</h3>
+                                <h3>USER</h3>
                                 <p>Create and manage metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
                                     LOGIN
@@ -64,7 +64,7 @@ const OnboardDataProduct = () => {
 
                             <div className="login-card" onClick={handleAdminLogin}>
                                 <div className="login-icon">⚙️</div>
-                                <h3>Admin Login</h3>
+                                <h3>ADMIN</h3>
                                 <p>Review and approve metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
                                     LOGIN

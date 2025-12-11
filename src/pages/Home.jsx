@@ -69,7 +69,7 @@ const Home = () => {
                         <div className="login-cards">
                             <div className="login-card fade-in" style={{ animationDelay: '0.2s' }} onClick={handleUserLogin}>
                                 <div className="login-icon">👤</div>
-                                <h2>User Login</h2>
+                                <h2>USER</h2>
                                 <p>Create and manage metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
                                     LOGIN
@@ -78,7 +78,7 @@ const Home = () => {
 
                             <div className="login-card fade-in" style={{ animationDelay: '0.3s' }} onClick={handleAdminLogin}>
                                 <div className="login-icon">⚙️</div>
-                                <h2>Admin Login</h2>
+                                <h2>ADMIN</h2>
                                 <p>Review and approve metric contracts</p>
                                 <button className="btn btn-primary btn-lg">
                                     LOGIN
